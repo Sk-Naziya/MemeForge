@@ -1,60 +1,126 @@
-# MemeForge
+# 🎭 MemeForge — Create Memes, Share the Fun!
 
-A premium meme generator built with HTML, CSS, and JavaScript on the frontend, and a minimal Express backend for health and template API routes.
+MemeForge is a fun and easy-to-use **Meme Generator Web Application** that lets users create memes using their own images and text. It aims to make meme creation simple, creative, and enjoyable through a user-friendly interface.
 
-## Features
+## ✨ Features
 
-- Built-in template gallery with search and category filters
-- Upload custom images or choose a template
-- Add, edit, remove, and position custom text layers
-- Live meme preview
-- Download final memes as PNG files
-- Responsive design for desktop, tablet, and mobile
+- 🎨 **Meme Creation:** Create custom memes by adding text to images.
+- 🖼️ **Image Support:** Use images as the base for your memes.
+- ✏️ **Text Customization:** Add and personalize meme captions.
+- 🎉 **Interactive Interface:** Enjoy a simple and engaging meme-making experience.
+- 💾 **Meme Storage:** Uses a Flask backend and SQLite database for meme-related data.
+- 🌐 **Web-Based Application:** Access the application through a web browser.
 
-## Project structure
+## 🛠️ Tech Stack
+
+**Frontend**
+- HTML5
+- CSS3
+- JavaScript
+
+**Backend**
+- Python
+- Flask
+
+**Database**
+- SQLite
+
+## 📁 Project Structure
 
 ```text
-memeforge/
+MemeForge/
+├── backend/
+│   ├── app.py
+│   └── requirements.txt
 ├── frontend/
 │   ├── index.html
-│   ├── css/
-│   │   └── styles.css
-│   ├── js/
-│   │   └── main.js
-│   └── assets/
-│       └── images/
-├── backend/
-│   ├── package.json
-│   ├── .env.example
-│   └── src/
-│       ├── server.js
-│       └── app.js
+│   ├── studio.html
+│   ├── finish.html
+│   ├── style.css
+│   └── script.js
 ├── .gitignore
 └── README.md
 ```
 
-## Installation
+## 🚀 Run the Project Locally
+
+### Prerequisites
+
+Install Python and Git on your computer.
+
+### 1. Clone the repository
 
 ```bash
-cd memeforge/backend
-npm install
+git clone https://github.com/Sk-Naziya/MemeForge.git
 ```
 
-## Run the app
+### 2. Open the project folder
 
 ```bash
-cd memeforge/backend
-npm start
+cd MemeForge
 ```
 
-Then open http://localhost:3000 in your browser.
+### 3. Create a virtual environment
 
-## Optional MongoDB configuration
+```bash
+python -m venv .venv
+```
 
-This app does not require MongoDB to create or download memes. The core flow works without a database connection. A MongoDB URI is included in `.env.example` only as a placeholder for any future saved-meme feature, such as storing user-generated meme records or template metadata persistently.
+### 4. Activate the virtual environment
 
-## Notes
+**Windows PowerShell:**
 
-- The app validates upload types and file sizes in the browser.
-- The backend exposes a health endpoint at `/api/health` and template metadata at `/api/templates`.
-- The frontend loads template images from available public URLs and will still function even if a third-party image host is unavailable.
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+### 5. Install backend dependencies
+
+```bash
+cd backend
+pip install -r requirements.txt
+```
+
+### 6. Start the Flask backend
+
+```bash
+python app.py
+```
+
+The backend will run at the local address configured in `app.py`, typically:
+
+```text
+http://127.0.0.1:5000
+```
+
+### 7. Open the frontend
+
+Open `frontend/index.html` in your browser, or use a local development server if your application requires one.
+
+**Note:** The frontend and backend must be configured to communicate with each other. Some features may not work until the backend is running.
+
+## 📌 Project Goals
+
+- Make meme creation accessible to everyone.
+- Provide an enjoyable and creative user experience.
+- Practice frontend development and Python backend integration.
+- Explore storing and managing application data with SQLite.
+
+## 🔮 Future Improvements
+
+- Add more animations and visual effects.
+- Introduce additional meme templates.
+- Improve text styling and customization.
+- Add more interactive features.
+- Make the application responsive across mobile and desktop devices.
+- Deploy the complete application online.
+
+## 👩‍💻 Developer
+
+**Shaik Naziya**
+
+GitHub: [Sk-Naziya](https://github.com/Sk-Naziya)
+
+## 📄 License
+
+No license has been specified yet.
