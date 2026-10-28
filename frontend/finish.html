@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MemeForge | Your Masterpiece</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="page-finish">
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-icon">M</span>MemeGenerator</a>
+    <span class="tag">CREATION COMPLETE</span>
+  </header>
+
+  <main class="finish-wrap">
+    <section class="glass finish-card">
+      <div class="success-icon">✓</div>
+      <span class="eyebrow">FRESH FROM YOUR STUDIO</span>
+      <h1>That's a <span>masterpiece!</span></h1>
+      <p id="finishMessage" class="muted">Your meme is ready to make someone smile.</p>
+
+      <div class="final-frame">
+        <img id="finalImage" alt="Your completed meme" hidden>
+        <p id="noImage" class="muted">Create a meme in the studio first.</p>
+      </div>
+
+      <div class="asset-details">
+        <span class="tag" id="finalArtist">✦ Artist</span>
+        <span class="tag">PNG IMAGE</span>
+      </div>
+
+      <div class="finish-actions">
+        <button id="downloadBtn" class="btn primary" type="button">↓ Download image</button>
+        <button id="anotherBtn" class="btn secondary" type="button">↻ Create another</button>
+      </div>
+      <p class="hint">Your finished image is ready to save locally.</p>
+    </section>
+    <p class="footer">Made with creativity and a little mischief ✦</p>
+  </main>
+</body>
+</html>

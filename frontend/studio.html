@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MemeForge | Studio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="page-studio">
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-icon">M</span> MemeGenerator</a>
+    <span class="artist-pill">Creating as <strong id="artistName">Artist</strong></span>
+  </header>
+
+  <main class="studio">
+    <section class="page-heading">
+      <span class="eyebrow">THE CREATIVE STUDIO</span>
+      <h1>Your next <span>viral moment.</span></h1>
+      <p class="muted">Upload, customize, drag, and create. Make it yours!</p>
+    </section>
+
+    <div class="studio-grid">
+      <section class="glass panel">
+        <div class="panel-title">
+          <h2>Live preview</h2>
+          <span class="tag">LIVE CANVAS</span>
+        </div>
+        <div class="canvas-frame">
+          <canvas id="memeCanvas" width="900" height="650"></canvas>
+        </div>
+        <p class="hint">Drag the captions with your mouse or finger.</p>
+      </section>
+
+      <section class="glass panel">
+        <h2>Customize your meme</h2>
+
+        <label class="upload-box" for="imageUpload">
+          <span class="upload-icon">＋</span>
+          <span><strong>Upload a photo</strong><small>JPG, PNG or WebP · Max 10 MB</small></span>
+        </label>
+        <input id="imageUpload" type="file" accept="image/jpeg,image/png,image/webp" hidden>
+
+        <label for="topText">Top caption</label>
+        <input id="topText" maxlength="180" placeholder="WHEN YOU FINALLY...">
+
+        <label for="bottomText">Bottom caption</label>
+        <input id="bottomText" maxlength="180" placeholder="...GET WHAT YOU WANTED">
+
+        <label for="fontFamily">Font style</label>
+        <select id="fontFamily">
+          <option value="Impact">Classic Meme</option>
+          <option value="Arial Black">Bold Modern</option>
+          <option value="Arial">Simple</option>
+          <option value="Georgia">Elegant Serif</option>
+        </select>
+
+        <div class="range-label"><label for="fontSize">Text size</label><output id="fontSizeValue">48 px</output></div>
+        <input id="fontSize" type="range" min="18" max="90" value="48">
+
+        <div class="color-grid">
+          <div><label for="textColor">Text color</label><input id="textColor" type="color" value="#FFFFFF"></div>
+          <div><label for="outlineColor">Outline color</label><input id="outlineColor" type="color" value="#221A1C"></div>
+        </div>
+
+        <div class="range-label"><label for="outlineWidth">Outline thickness</label><output id="outlineValue">4 px</output></div>
+        <input id="outlineWidth" type="range" min="0" max="12" value="4">
+
+        <div class="check-row">
+          <label><input id="boldToggle" type="checkbox" checked> Bold text</label>
+          <label><input id="uppercaseToggle" type="checkbox" checked> Uppercase</label>
+        </div>
+
+        <div class="button-stack">
+          <button id="saveBtn" class="btn primary full" type="button">Compile my meme ↗</button>
+          <button id="resetBtn" class="btn secondary full" type="button">Reset captions</button>
+        </div>
+        <p class="hint">Your image stays in your browser.</p>
+      </section>
+    </div>
+    <p class="footer">MemeForge Studio · Create something unforgettable.</p>
+  </main>
+</body>
+</html>
